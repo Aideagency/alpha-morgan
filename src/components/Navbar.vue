@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="top-nav d-flex justify-content-between align-items-center">
-      <p class="time text-orange">{{ timestamp }}</p>
+      <div class="time text-orange">{{ timestamp }}</div>
       <div class="logon d-flex">
         <a class="account mr-3">Open an Account</a>
         <a class="text-orange">Sign in</a>
@@ -115,9 +115,9 @@ export default {
   },
   methods: {
     getNow() {
-      const today = new Date();
-      const time =
-        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      const time = new Date()
+        .toLocaleTimeString()
+        .replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
       this.timestamp = time;
     }
   }
