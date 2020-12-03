@@ -117,9 +117,11 @@ export default {
   },
   methods: {
     getNow() {
-      const time = new Date()
-        .toLocaleTimeString()
-        .replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
+      const time = new Date().toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true
+      });
       this.timestamp = time;
     }
   }
