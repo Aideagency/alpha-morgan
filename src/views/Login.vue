@@ -26,7 +26,7 @@
 
             <p class="mt-5">
               Dont't have an account ?
-              <router-link to="/SignUp" class="text-orange"
+              <router-link to="/register" class="text-orange"
                 >Sign Up</router-link
               >
             </p>
