@@ -3,8 +3,10 @@
     <div class="top-nav d-flex justify-content-between align-items-center">
       <div class="time text-orange">{{ timestamp }}</div>
       <div class="logon d-flex">
-        <a class="account mr-3 text-center">Open an Account</a>
-        <a class="text-orange">Sign in</a>
+        <router-link to="/register" class="account mr-3 text-center"
+          >Open an Account</router-link
+        >
+        <router-link to="/login" class="text-orange">Sign in</router-link>
       </div>
     </div>
     <div class="bottom-nav d-flex justify-content-between align-items-center">
